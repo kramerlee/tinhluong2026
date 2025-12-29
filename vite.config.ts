@@ -2,8 +2,8 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'node:url'
 
-export default defineConfig(({ command }) => ({
-  base: command === 'build' ? '/tinhluong/' : '/',
+export default defineConfig({
+  base: '/tinhluong/',
   plugins: [vue()],
   resolve: {
     alias: {
@@ -14,5 +14,4 @@ export default defineConfig(({ command }) => ({
     port: 3000,
     host: true
   }
-}))
-
+})

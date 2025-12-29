@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { useHead } from '@unhead/vue'
 import { useSalaryStore } from '@/stores/salary'
 import InputNumber from 'primevue/inputnumber'
 import Card from 'primevue/card'
@@ -10,6 +11,21 @@ import Column from 'primevue/column'
 import Checkbox from 'primevue/checkbox'
 
 const store = useSalaryStore()
+
+// Page-specific SEO
+useHead({
+  title: 'Tính Lương NET 2026 - Công cụ tính lương online miễn phí',
+  meta: [
+    {
+      name: 'description',
+      content: computed(() => 
+        store.isNewTaxBrackets 
+          ? 'Tính lương NET từ GROSS với biểu thuế mới 5 bậc từ 01/07/2026. Giảm trừ gia cảnh 15.5 triệu/tháng, người phụ thuộc 6.2 triệu/người.'
+          : 'Tính lương NET từ GROSS theo mức giảm trừ gia cảnh 2026. Giảm trừ bản thân 15.5 triệu, người phụ thuộc 6.2 triệu/người/tháng.'
+      )
+    }
+  ]
+})
 
 const grossSalaryModel = computed({
   get: (): number => store.grossSalary,

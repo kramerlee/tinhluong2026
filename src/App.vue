@@ -1,8 +1,26 @@
 <script setup lang="ts">
+import { onMounted } from 'vue'
 import { useHead } from '@unhead/vue'
 import { RouterView } from 'vue-router'
 
 const siteUrl = 'https://kramerlee.github.io/tinhluong'
+
+// Signal that Vue has hydrated - hide loader and show app
+onMounted(() => {
+  // Mark app as hydrated
+  const app = document.getElementById('app')
+  if (app) {
+    app.classList.add('hydrated')
+  }
+  
+  // Hide and remove loader
+  const loader = document.getElementById('app-loader')
+  if (loader) {
+    loader.classList.add('hidden')
+    // Remove from DOM after transition
+    setTimeout(() => loader.remove(), 300)
+  }
+})
 
 useHead({
   htmlAttrs: {

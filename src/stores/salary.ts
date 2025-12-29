@@ -80,14 +80,8 @@ export const useSalaryStore = defineStore('salary', () => {
     { limit: Infinity, rate: 0.35 }
   ]
 
-  // Date for new tax brackets (January 1, 2026)
-  const NEW_TAX_EFFECTIVE_DATE = new Date('2026-01-01')
-
-  // Check if new tax brackets should be applied
-  const isNewTaxBrackets = computed<boolean>(() => {
-    const today = new Date()
-    return today >= NEW_TAX_EFFECTIVE_DATE
-  })
+  // Always use new 5-bracket tax system (2026 rates applied immediately for preview)
+  const isNewTaxBrackets = computed<boolean>(() => true)
 
   // Get current applicable tax brackets
   const TAX_BRACKETS = computed<TaxBracket[]>(() => {

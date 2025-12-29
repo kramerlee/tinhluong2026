@@ -11,7 +11,7 @@ const store = useSalaryStore()
       <div class="notice-content">
         <i class="pi pi-star-fill"></i>
         <div>
-          <strong>Áp dụng biểu thuế mới từ 01/07/2026</strong>
+          <strong>Áp dụng biểu thuế mới từ 01/01/2026</strong>
           <p>Giảm từ 7 bậc xuống 5 bậc theo Nghị quyết 954/2025/UBTVQH15</p>
         </div>
       </div>

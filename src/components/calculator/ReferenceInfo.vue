@@ -38,25 +38,25 @@ const { formatVND } = useFormatters()
           <strong>Bậc thuế TNCN đang áp dụng:</strong>
           <span v-if="store.isNewTaxBrackets">
             5 bậc (5%, 10%, 20%, 30%, 35%)
-            <span class="tag new">01/07/2026</span>
+            <span class="tag new">01/01/2026</span>
           </span>
           <span v-else>
             7 bậc (5%, 10%, 15%, 20%, 25%, 30%, 35%)
-            <span class="tag old">Trước 01/07/2026</span>
+            <span class="tag old">Trước 2026</span>
           </span>
         </li>
         <li>
           <strong>Căn cứ giảm trừ:</strong> Nghị quyết 110/2025/UBTVQH15 (từ 01/01/2026)
         </li>
         <li v-if="store.isNewTaxBrackets">
-          <strong>Căn cứ bậc thuế:</strong> Nghị quyết 954/2025/UBTVQH15 (từ 01/07/2026)
+          <strong>Căn cứ bậc thuế:</strong> Nghị quyết 954/2025/UBTVQH15 (từ 01/01/2026)
         </li>
       </ul>
 
       <!-- Tax Brackets Reference -->
       <Divider />
       <div class="brackets-reference">
-        <h4>Biểu thuế TNCN {{ store.isNewTaxBrackets ? 'mới (từ 01/07/2026)' : '(trước 01/07/2026)' }}</h4>
+        <h4>Biểu thuế TNCN {{ store.isNewTaxBrackets ? 'mới (từ 01/01/2026)' : '(trước 2026)' }}</h4>
         <table class="brackets-table">
           <thead>
             <tr>

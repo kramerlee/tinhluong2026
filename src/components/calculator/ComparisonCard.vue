@@ -23,7 +23,7 @@ const { formatVND, formatDiff } = useFormatters()
             <tr>
               <th>Khoản mục</th>
               <th>Trước 2026</th>
-              <th>{{ store.isNewTaxBrackets ? 'Từ 01/07/2026' : 'Từ 01/01/2026' }}</th>
+              <th>Từ 01/01/2026</th>
             </tr>
           </thead>
           <tbody>

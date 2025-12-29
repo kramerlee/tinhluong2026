@@ -60,7 +60,7 @@ export const useSalaryStore = defineStore('salary', () => {
   const BASE_SALARY = 2340000 // Lương cơ sở 2024
   const MAX_INSURANCE_SALARY = BASE_SALARY * 20 // Mức trần đóng BHXH
 
-  // Pre-July 2026 Tax brackets (7 brackets)
+  // Pre-2026 Tax brackets (7 brackets)
   const TAX_BRACKETS_OLD: TaxBracket[] = [
     { limit: 5000000, rate: 0.05 },
     { limit: 10000000, rate: 0.10 },
@@ -71,7 +71,7 @@ export const useSalaryStore = defineStore('salary', () => {
     { limit: Infinity, rate: 0.35 }
   ]
 
-  // From July 1, 2026 Tax brackets (5 brackets - Nghị quyết 954/2025/UBTVQH15)
+  // From January 1, 2026 Tax brackets (5 brackets - Nghị quyết 954/2025/UBTVQH15)
   const TAX_BRACKETS_NEW: TaxBracket[] = [
     { limit: 10000000, rate: 0.05 },
     { limit: 30000000, rate: 0.10 },
@@ -80,8 +80,8 @@ export const useSalaryStore = defineStore('salary', () => {
     { limit: Infinity, rate: 0.35 }
   ]
 
-  // Date for new tax brackets (July 1, 2026)
-  const NEW_TAX_EFFECTIVE_DATE = new Date('2026-07-01')
+  // Date for new tax brackets (January 1, 2026)
+  const NEW_TAX_EFFECTIVE_DATE = new Date('2026-01-01')
 
   // Check if new tax brackets should be applied
   const isNewTaxBrackets = computed<boolean>(() => {

@@ -13,11 +13,11 @@ const store = useSalaryStore()
     <p class="subtitle">Áp dụng mức giảm trừ gia cảnh 2026</p>
     <div v-if="store.isNewTaxBrackets" class="tax-badge new-tax">
       <i class="pi pi-bolt"></i>
-      Biểu thuế mới 5 bậc (từ 01/07/2026)
+      Biểu thuế mới 5 bậc (từ 01/01/2026)
     </div>
     <div v-else class="tax-badge old-tax">
       <i class="pi pi-calendar"></i>
-      Biểu thuế 7 bậc (trước 01/07/2026)
+      Biểu thuế 7 bậc (trước 2026)
     </div>
   </header>
 </template>

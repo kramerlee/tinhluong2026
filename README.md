@@ -45,19 +45,19 @@ Công cụ tính lương NET từ GROSS theo quy định thuế TNCN Việt Nam 
 
 ```bash
 # Install dependencies
-yarn install
+bun install
 
 # Start dev server
-yarn dev
+bun dev
 
 # Type check
-yarn type-check
+bun type-check
 
 # Build for production (SSG)
-yarn build
+bun build
 
 # Preview production build
-yarn preview
+bun preview
 ```
 
 ## 📦 Deployment
